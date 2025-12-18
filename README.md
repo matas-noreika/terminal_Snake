@@ -27,7 +27,7 @@ The current tasks that are planned to implemented are as follows:
 * event handle on terminal resize to adjust game area dimensions and title
 * game launch menu UI to allow for preferance configuration
     * colours for fruits and snakes
-* JASON format parser to use for mqtt messaging and game configuration save file
+* JSON format parser to use for mqtt messaging and game configuration save file
 * [Next Steps](NextSteps.md)
 
 # Useful links
