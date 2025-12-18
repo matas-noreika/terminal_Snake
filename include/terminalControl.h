@@ -1,6 +1,6 @@
 /*
  * Programmer: Matas Noreika Tue Dec 24 08:33:07 PM GMT 2024
- * Purpose: Holds declerations of functions that control the terminal dependedent on the target platform. The header also declares global variables needed for functionality.  
+ * Purpose: Holds declerations of functions that control the terminal dependent on the target platform. The header also declares global variables needed for functionality.
 */
 
 //standard c header to manipulate input and output
@@ -10,10 +10,10 @@
 #include <stdint.h>
 
 #ifdef _WIN32 //Windows platform
-	
+
 	//windows header file
-	#include <windows.h>	
-	
+	#include <windows.h>
+
 #else //POSIX platform
 
 	//POSIX c header for POSIX specific control
@@ -25,7 +25,6 @@
 	//POSIX c library used to communicate with kernel (used to get terminal width)
 	#include <sys/ioctl.h>
 
-		
 #endif
 
 //definition of success return code of all functions in header
@@ -55,8 +54,8 @@
 
 //function to return the terminal row & column size
 // MD20250104-02 Fixing disparities in function declarations
-int getTerminalSize(int*, int*);	
-	
+int getTerminalSize(int*, int*);
+
 //function to store the current terminal settings into target platform variable location
 //this function must be called prior enterRawMode()
 int getOriginalSettings();
@@ -67,7 +66,7 @@ int enterRawMode();
 //function to exit raw mode
 //no return can be set due to this function usually being binded to atexit()
 void exitRawMode();
-	
+
 //function to read from terminal input buffer independent of platform
 //returns the read size as max int size in current system to avoid conflict with ssize_t on other platforms 
 // MD20250104-02 Fixing disparities in function declarations
